@@ -4,9 +4,10 @@ import javax.annotation.processing.Generated;
 @RestController
 public class ApiController {
 
+    @Value("${val}")
+    private String name;
     @GetMapping("/")
     public String getName(){
-        String ans = "Welcome "+studentName+" !";
-        returna ans;
+        return "Welcome "+name+"!";
     }
 }
